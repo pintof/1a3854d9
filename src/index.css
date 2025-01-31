@@ -1,0 +1,67 @@
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: normal;
+  background: var(--surface-ground);
+  color: var(--text-color);
+  padding: 1rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.card {
+  background: var(--surface-card);
+  padding: 2rem;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.p-orderlist-controls {
+  display: none;
+}
+
+.p-progress-spinner {
+  position: static;
+}
+
+@media only screen and (min-width: 768px) {
+  .p-orderlist-list-container {
+    min-width: 400px;
+  }
+}
+
+.p-orderlist-item {
+  border-bottom: inherit;
+}
+
+li:has(#hide) {
+  display: none;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.p-selectbutton {
+  margin-right: auto;
+}
+
+.header {
+  height: 37px;
+  font-family: Brush Script MT;
+  font-size: xx-large;
+}
+
+button.p-button {
+  margin-left: auto;
+  height: 37px !important;
+  .archive-all-button,
+  .unarchive-all-button {
+    width: 21px;
+  }
+}
