@@ -2,7 +2,9 @@
 
 # Installation Instructions
 npm install
+
 npm run dev
+
 Note: you need Node v23 & NPM v11, you will get an error message if you try to run without these requirements
 
 # Screenshots:
