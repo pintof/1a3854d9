@@ -18,3 +18,5 @@ Light Theme
 
 Note: to enable Light Theme, uncomment the commented out code on Line 9 of src/main.jsx
 
+# Deployment Link
+diverfloyd.ddns.net/aircall.html
