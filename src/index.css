@@ -1,5 +1,5 @@
 html {
-  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 body {
@@ -15,7 +15,7 @@ body {
 .card {
   background: var(--surface-card);
   padding: 2rem;
-  border-radius: 10px;
+  border-radius: 0.625rem;
   margin-bottom: 1rem;
 }
 
@@ -27,9 +27,9 @@ body {
   position: static;
 }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 48rem) {
   .p-orderlist-list-container {
-    min-width: 400px;
+    min-width: 25rem;
   }
 }
 
@@ -52,16 +52,20 @@ li:has(#hide) {
 }
 
 .header {
-  height: 37px;
-  font-family: Brush Script MT;
+  height: 2.313rem;
+  font-family:
+    Brush Script MT,
+    "Dancing Script",
+    cursive;
   font-size: xx-large;
 }
 
 button.p-button {
   margin-left: auto;
-  height: 37px !important;
-  .archive-all-button,
-  .unarchive-all-button {
-    width: 21px;
-  }
+  height: 2.313rem !important;
+}
+
+.archive-all-button,
+.unarchive-all-button {
+  width: 21px;
 }
