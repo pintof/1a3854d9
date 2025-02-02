@@ -1,11 +1,12 @@
 import PropTypes from "prop-types";
-import { useRef, useState } from "react";
+import { useRef, useState, useContext } from "react";
 import { OrderList } from "primereact/orderlist";
 import { ProgressSpinner } from "primereact/progressspinner";
 import { Toast } from "primereact/toast";
 import { SelectButton } from "primereact/selectbutton";
 import { Button } from "primereact/button";
 import { Tooltip } from "primereact/tooltip";
+import { PrimeReactContext } from "primereact/api";
 import {
   ArchiveBoxArrowDownIcon,
   ArchiveBoxXMarkIcon,
@@ -26,6 +27,11 @@ export default function Calls({ base_url }) {
 
   //loading state of mutations to control button loading spinner
   const [loading, setLoading] = useState(false);
+
+  //context from prime react for switching between themes
+  const { changeTheme } = useContext(PrimeReactContext);
+  //boolean to switch between light & dark theme
+  let toggleThemeBoolean;
 
   //options for tab navigation menu to switch between calls and archive, values are boolean (so that it can be used to control archiveStatus switch)
   const justifyOptions = [
@@ -108,7 +114,26 @@ export default function Calls({ base_url }) {
                 optionLabel="value"
                 options={justifyOptions}
               />
-              <span className="header">AirCall</span>
+              <span
+                className="header"
+                onClick={() =>
+                  toggleThemeBoolean
+                    ? changeTheme(
+                        "/themes/lara-light-cyan/theme.css",
+                        "/themes/soho-dark/theme.css",
+                        "theme-link",
+                        () => (toggleThemeBoolean = !toggleThemeBoolean)
+                      )
+                    : changeTheme(
+                        "/themes/soho-dark/theme.css",
+                        "/themes/lara-light-cyan/theme.css",
+                        "theme-link",
+                        () => (toggleThemeBoolean = !toggleThemeBoolean)
+                      )
+                }
+              >
+                AirCall
+              </span>
               {/* Button which dynamically renders as Archive All button if in the Calls UI, or Unarchive All button if in the Archive UI */}
               <Button
                 tooltip={archiveStatus ? "Archive All" : "Unarchive All"}
