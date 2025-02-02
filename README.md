@@ -3,7 +3,9 @@
 # Installation Instructions
 npm install
 
-npm run dev
+npm run dev (to launch server & run app)
+
+npm run build (to generate a SPA in a 'dist' folder)
 
 Note: you need Node v23 & NPM v11, you will get an error message if you try to run without these requirements
 
