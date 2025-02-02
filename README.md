@@ -18,7 +18,7 @@ Light Theme
 
 ![image](https://github.com/user-attachments/assets/3d19fdaa-95e4-4808-80c7-72c90bb07d9f)
 
-Note: to enable Light Theme, uncomment the commented out code on Line 9 of src/main.jsx
+Note: Click 'Aircall' logo to toggle between light & dark theme
 
 # Deployment Link
 diverfloyd.ddns.net/aircall.html
